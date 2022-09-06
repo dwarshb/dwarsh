@@ -6,7 +6,12 @@
 }
 
 body {
-	background-color: #252525;
+	background-image: url("img/background.jpg");
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 	padding: 0;
 	margin: 0;        
     width: 100%;
@@ -15,13 +20,6 @@ body {
 }
 
 .the-frame {
-
-	/* The image used */
-	background-image: url("img/bg_blur.png");
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	padding-top:60px;
 	overflow:hidden;
 }
@@ -59,30 +57,29 @@ and (orientation: landscape) {
   }
 }
 
-//Pixel Devices
+/*Pixel Devices*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.77) and (orientation:landscape)  {
  .framer {
 	  zoom:50%;
   }
 }
 
-//Ipad
+/*Ipad*/
 @media only screen and (min-width: 680px) and (max-width: 1024px) {
   .framer {
 	  width:680px;
 	  height:1024px;
   }
   .the-frame {
-	  zoom:125%;
-	  height:1024px;
+	  zoom:155%;
   }
 }
 
-//Ipad Pro
-@media only screen and (min-width: 1024px) and (max-width: 1366) {
-  .the-frame {
+/*Ipad Pro*/
+@media only screen and (min-width: 1280px) and (min-height: 800px) {
+	.the-frame {
 	  zoom:155%;
-  }
+	}
 }
 /* The horizontal line on the top of the device */
 .framer:before {
@@ -99,6 +96,7 @@ and (orientation: landscape) {
 }
 
 .framer {
+	background-color: #fff;
 	padding: 0;
 	position:relative;
 	margin: auto;
